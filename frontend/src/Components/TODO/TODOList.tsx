@@ -4,9 +4,9 @@ import { IProps } from "./TODOReducer";
 const TODOList: React.FC<{ state: IProps }> = ({ state }) => {
   return (
     <>
-      {state.Data.map((item, index) => {
+      {state.DataList.map((item, index) => {
         return (
-          <div className="todo-list">
+          <div key={index} className="todo-list">
             <div className="todo-item">
               <div className="checker">
                 <span className="">

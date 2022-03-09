@@ -3,4 +3,5 @@ export default interface ITODO{
     Task:string
     IsCompleted:boolean
     CreatedOn:Date
+    CompletedOn:Date
 }
