@@ -8,7 +8,7 @@ namespace backend.Services.TODOService
     {
         private static List<TODOModel> data = new List<TODOModel>{
             new TODOModel{Id=1,TaskName="Task 1",CreatedOn=System.DateTime.Now,IsCompleted=false},
-            new TODOModel{Id=2,TaskName="Task 2",CreatedOn=System.DateTime.Now,IsCompleted=false},
+            new TODOModel{Id=2,TaskName="Task 2",CreatedOn=System.DateTime.Now,IsCompleted=true},
             new TODOModel{Id=3,TaskName="Task 3",CreatedOn=System.DateTime.Now,IsCompleted=false},
             new TODOModel{Id=4,TaskName="Task 4",CreatedOn=System.DateTime.Now,IsCompleted=false},
             new TODOModel{Id=5,TaskName="Task 5",CreatedOn=System.DateTime.Now,IsCompleted=false}

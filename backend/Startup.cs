@@ -28,7 +28,13 @@ namespace backend
         // This method gets called by the runtime. Use this method to add services to the container.
         public void ConfigureServices(IServiceCollection services)
         {
-
+            services.AddCors(option =>
+            {
+                option.AddPolicy(name: "default", builder =>
+                {
+                    builder.WithOrigins("*").AllowAnyHeader().AllowAnyMethod();
+                });
+            });
             services.AddControllers();
             services.AddScoped<ITODOService,TODOService>();
             services.AddSwaggerGen(c =>
@@ -49,8 +55,8 @@ namespace backend
 
             app.UseHttpsRedirection();
 
+            app.UseCors("default");
             app.UseRouting();
-
             app.UseAuthorization();
 
             app.UseEndpoints(endpoints =>

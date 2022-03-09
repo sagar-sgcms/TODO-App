@@ -9,15 +9,14 @@ export interface IProps {
 function reducer(state:IProps,action:IReducerActio){
     switch (action.type) {
         case "GetData":
-            return state
+            const {data} = action.payload
+            return {...state,DataList:data as ITODO[]}
         case "AddData":
-            debugger
             const {Task} = action.payload
             var list = [...state.DataList]
             list.push(Task);
             return {...state,DataList:list,EnteredTask:""}
         case "OnTextChange":
-            debugger
             const {Text} = action.payload
             return {...state,EnteredTask:Text}
         default:

@@ -1,31 +1,34 @@
-import React, { useReducer } from "react";
+import axios from "axios";
+import React, { useEffect, useReducer } from "react";
 import ITODO from "../../../models/ITODO";
 import TODOList from "./TODOList";
 import reducer, { IProps } from "./TODOReducer";
 
 function TODOMaster() {
   const intialValue: IProps = {
-    DataList: [
-      { Id: 1, Task: "Task 1", CreatedOn: new Date(), IsCompleted: false },
-      { Id: 2, Task: "Task 2", CreatedOn: new Date(), IsCompleted: false },
-      { Id: 3, Task: "Task 3", CreatedOn: new Date(), IsCompleted: false },
-      { Id: 4, Task: "Task 4", CreatedOn: new Date(), IsCompleted: false },
-      { Id: 5, Task: "Task 5", CreatedOn: new Date(), IsCompleted: false },
-    ] as ITODO[],
+    DataList: [] as ITODO[],
     EnteredTask:''
   };
   const [state, dispatch] = useReducer(reducer, intialValue);
+
+  useEffect(()=>{
+    axios.get("https://localhost:5001/TODO").then(function(res){
+      dispatch({type: 'GetData', payload: {data: res.data.data}})
+    })
+  },[])
+
   const handleKeyDown =(e:any)=>{
-    dispatch({type: 'OnTextChange', payload: {Text: e.target.value}})
-    const Data = {
-      CreatedOn:new Date(),
-      Id:1,
-      Task:e.target.value,
-      IsCompleted:false
-    } as ITODO
-    if (e.key === 'Enter') {
-      dispatch({type: 'AddData', payload: {Task: Data}})
-    }
+    // dispatch({type: 'OnTextChange', payload: {Text: e.target.value}})
+    
+    // if (e.key === 'Enter') {
+    //   const Data = {
+    //     id:1,
+    //     createdOn:new Date(),
+    //     taskName:e.target.value,
+    //     isCompleted:false
+    //   } as ITODO
+    //   dispatch({type: 'AddData', payload: {Task: Data}})
+    // }
   }
   return (
     <>

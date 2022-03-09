@@ -1,4 +1,5 @@
 import React from "react";
+import TODOItem from "./TODOItem";
 import { IProps } from "./TODOReducer";
 
 const TODOList: React.FC<{ state: IProps }> = ({ state }) => {
@@ -6,26 +7,10 @@ const TODOList: React.FC<{ state: IProps }> = ({ state }) => {
     <>
       {state.DataList.map((item, index) => {
         return (
-          <div key={index} className="todo-list">
-            <div className="todo-item">
-              <div className="checker">
-                <span className="">
-                  <input type="checkbox" />
-                </span>
-              </div>
-              <span>{item.Task}</span>
-              <a
-                href="javascript:void(0);"
-                className="float-right remove-todo-item"
-              >
-                <i className="icon-close"></i>
-              </a>
-            </div>
-          </div>
+          <TODOItem key={index} state={item} ></TODOItem>
         );
       })}
     </>
   );
 };
-
 export default TODOList;

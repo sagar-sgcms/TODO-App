@@ -5942,26 +5942,19 @@
     ]
   },
   "packageFolders": {
-    "C:\\Users\\ACER\\.nuget\\packages\\": {},
-    "C:\\Program Files (x86)\\Microsoft Visual Studio\\Shared\\NuGetPackages": {},
-    "C:\\Program Files\\dotnet\\sdk\\NuGetFallbackFolder": {}
+    "C:\\Users\\Sagar\\.nuget\\packages\\": {}
   },
   "project": {
     "version": "1.0.0",
     "restore": {
-      "projectUniqueName": "D:\\Work\\GrapheneFx\\TODO App\\backend\\backend.csproj",
+      "projectUniqueName": "C:\\Users\\Sagar\\Desktop\\TODO-App\\TODO-App\\backend\\backend.csproj",
       "projectName": "backend",
-      "projectPath": "D:\\Work\\GrapheneFx\\TODO App\\backend\\backend.csproj",
-      "packagesPath": "C:\\Users\\ACER\\.nuget\\packages\\",
-      "outputPath": "D:\\Work\\GrapheneFx\\TODO App\\backend\\obj\\",
+      "projectPath": "C:\\Users\\Sagar\\Desktop\\TODO-App\\TODO-App\\backend\\backend.csproj",
+      "packagesPath": "C:\\Users\\Sagar\\.nuget\\packages\\",
+      "outputPath": "C:\\Users\\Sagar\\Desktop\\TODO-App\\TODO-App\\backend\\obj\\",
       "projectStyle": "PackageReference",
-      "fallbackFolders": [
-        "C:\\Program Files (x86)\\Microsoft Visual Studio\\Shared\\NuGetPackages",
-        "C:\\Program Files\\dotnet\\sdk\\NuGetFallbackFolder"
-      ],
       "configFilePaths": [
-        "C:\\Users\\ACER\\AppData\\Roaming\\NuGet\\NuGet.Config",
-        "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.FallbackLocation.config",
+        "C:\\Users\\Sagar\\AppData\\Roaming\\NuGet\\NuGet.Config",
         "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
       ],
       "originalTargetFrameworks": [
@@ -5969,7 +5962,6 @@
       ],
       "sources": {
         "C:\\Program Files (x86)\\Microsoft SDKs\\NuGetPackages\\": {},
-        "C:\\Program Files (x86)\\Progress\\Telerik UI for ASP.NET Core R3 2017\\wrappers\\aspnetcore\\Binaries": {},
         "https://api.nuget.org/v3/index.json": {}
       },
       "frameworks": {
@@ -6019,7 +6011,7 @@
             "privateAssets": "all"
           }
         },
-        "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\5.0.301\\RuntimeIdentifierGraph.json"
+        "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\6.0.200\\RuntimeIdentifierGraph.json"
       }
     }
   }
